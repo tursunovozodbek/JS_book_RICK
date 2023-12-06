@@ -18,12 +18,14 @@
       <li>Downwards</li>
       <li>Sideways</li>
       <li>Upwards</li>
+      <li>Upwards</li>
     </ul>
 
     <div class="gallery">
       <h2 class="gallery__title">Title 1</h2>
       <h2 class="gallery__description">Description goes here!</h2>
     </div>
+
     <ul class="menu1">
       <li class="link"><a href="index.html">Home</a></li>
       <li class="link"><a href="about.html">About Us</a></li>
@@ -41,43 +43,47 @@
     //get the children of the menu list
     const menuList = document.querySelector(".menu");
     const menuItems = menuList.children;
-    console.log(menuItems);
+    // console.log("Menyu Listni bollari: ", menuItems); // Kommentdan chiqar ko'rasan!
     //Loop over all of the elements
     const items = Array.from(menuItems);
     items.forEach((element) => {
-      //console.log(element);
+      // console.log("forEachning elementi: ", element);
     });
+
     //nth-child from HTML Collections
     const firstHTMLCollectionItem = menuItems[0];
     const secondHTMLCollectionItem = menuItems[1];
     const thirdHTMLCollectionItem = menuItems[2];
-    console.log("HTML Collection nth-items");
-    console.log(firstHTMLCollectionItem);
-    console.log(secondHTMLCollectionItem);
-    console.log(thirdHTMLCollectionItem);
+    // console.log("HTML Collection nth-items, Kolleksiya itemlar");
+    // console.log(firstHTMLCollectionItem);
+    // console.log(secondHTMLCollectionItem);
+    // console.log(thirdHTMLCollectionItem);
+
     //nth-child from NodeList
     const links = document.querySelectorAll(".link");
-    console.log(links);
+    // console.log(links);
     const firstNodeListItem = links[0];
     const secondNodeListItem = links[1];
     const thirdNodeListItem = links[2];
     const fourthNodeListItem = links[3];
     const fifthNodeListItem = links[4];
-    console.log("NodeList nth-items");
-    console.log(firstNodeListItem);
-    console.log(secondNodeListItem);
-    console.log(thirdNodeListItem);
-    console.log(fourthNodeListItem);
-    console.log(fifthNodeListItem);
+    // console.log("NodeList nth-items, Nodelist itemlari");
+    // console.log(firstNodeListItem);
+    // console.log(secondNodeListItem);
+    // console.log(thirdNodeListItem);
+    // console.log(fourthNodeListItem);
+    // console.log(fifthNodeListItem);
 
     //parent element
     const galleryTitle = document.querySelector(".gallery__description");
-    const parentEl = galleryTitle.parentElement;
-    console.log(parentEl);
+    const parentEl = galleryTitle.parentNode;
+    // console.log("Otasini topib berdik ", parentEl);
+
     //closest
     const aHref = document.querySelector("a");
     const theClosest = aHref.closest(".menu1");
-    console.log(theClosest);
+    // console.log(theClosest);
+
     //combining the parentElement, children and index for sideway DOM traversing
     const firstURLLink = document.querySelector(".link");
     const parent = firstURLLink.parentElement;
